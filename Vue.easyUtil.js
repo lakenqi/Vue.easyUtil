@@ -6,7 +6,7 @@ Vue.component('selected',{
 	props : ['id','text'],
 	template: '\
 	<div :id="idName" class="dropdown blueForm easyUtil-toRight">\
-		<button type="button" class="dropdown-toggle" data-toggle="dropdown">\
+		<button type="button" class="dropdown-toggle easyUtil-flexContainerRow" data-toggle="dropdown">\
 			<span class="">{{text}}</span>\
 			<i class="easyUtil-fBlue iconfont icon-xiala selectIcon"></i>\
 		</button>\
@@ -21,6 +21,22 @@ Vue.component('selected',{
 	data:function(){
 		return {
 			idName: this.id,
+		}
+	}
+});
+//  ========== 
+//  = jDate 插件 日期组件 = 
+Vue.component('j-date',{
+	props : ['id','defaulttext'],
+	template: '\
+	<div class="blueForm easyUtil-flexContainerRow">\
+		<input type="text" class="jeinput" :name="idName" :id="idName" :placeholder="text" value="" readonly="readonly">\
+		<label :for="idName"><i class="iconfont easyUtil-fBlue icon-riqi"></i></label>\
+	</div>',
+	data:function(){
+		return {
+			idName: this.id,
+			text: this.defaulttext
 		}
 	}
 });
