@@ -8,7 +8,7 @@ Vue.component('selected',{
 	<div :id="idName" class="dropdown blueForm easyUtil-toRight">\
 		<button type="button" class="dropdown-toggle easyUtil-flexContainerRow" data-toggle="dropdown">\
 			<span class="">{{text}}</span>\
-			<i class="easyUtil-fBlue iconfont icon-xiala selectIcon"></i>\
+			<i class="easyUtil-fBlue iconfont icon-xiala"></i>\
 		</button>\
 		<ul class="dropdown-menu dropdown-menu-right">\
 			<slot>\
