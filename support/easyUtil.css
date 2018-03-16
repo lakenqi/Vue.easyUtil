@@ -109,19 +109,27 @@ h3{
  	padding: 8px 0px !important;
  	font-size: 0.9vw;
  }
- /*colorsquare*/
-.easyUtil-diamond{
-	height: 20px;
-	width: 20px;
-	background-color: #003d67;
-	display: inline-block;
+ /*counter*/
+.easyUtil-startCounter{
+	counter-reset: xuhao;
+}
+.easyUtil-counter:before{
+	content: counter(xuhao);
+	counter-increment: xuhao;
+	background-color: rgb(0, 106, 155);
 	border-radius: 5px;
-}.redDiamond{
-	background-color: #d6505f !important;
-}.orangeDiamond{
-	background-color: orange !important;
-}.greenDiamond{
-	background-color: #24FF00 !important;
+	display: block;
+	width: 1.2vw;
+	height: 1.2vw;
+	margin: 8px;
+	text-align: center;
+	font-size: 0.8vw;
+}.counter1:before{
+	background-color: #d6505f;
+}.counter2:before{
+	background-color: orange;
+}.counter3:before{
+	background-color: #24FF00;
 }
  
 /* = changeColor = */
