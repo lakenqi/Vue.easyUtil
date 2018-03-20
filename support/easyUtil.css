@@ -121,7 +121,7 @@ h3{
 	display: block;
 	width: 1.2vw;
 	height: 1.2vw;
-	margin: 8px;
+	margin: 30% auto;
 	text-align: center;
 	font-size: 0.8vw;
 }.counter1:before{
@@ -515,6 +515,26 @@ z-index: 9999;
     line-height: 29px;
     margin-left: 15px;
     box-sizing: border-box;
+}
+.downarray{
+	border-left: 2px solid;
+	border-bottom: 2px solid;
+	transform: rotate(-45deg);
+	height: 9px;
+	width: 9px;
+	cursor: pointer;
+	margin-top: 4px;
+}
+.downarray:before{
+	content: " ";
+	white-space: pre;
+	display: block;
+	border-left: 2px solid;
+	border-bottom: 2px solid;
+	width: 9px;
+	height: 9px;
+	margin-left: 2px;
+	margin-top: -4px;
 }
 .dropdown-toggle{
 	height: 100%;
