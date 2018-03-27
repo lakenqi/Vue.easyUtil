@@ -1,5 +1,5 @@
 /* = CSS noraml by qy 2018.1.4 = */
-/* = remove defaultCSS = */
+/* ================ remove defaultCSS ======================== */
 *:focus {
     outline: none;
 }
@@ -7,7 +7,7 @@ a:hover,a:focus,a:active,a:visited,a:link{
     text-decoration: none;
 }
 
-/* ========== */
+/* ================================================================= */
 /* = base CSS = */
 * {
     margin: 0px;
@@ -48,34 +48,48 @@ input[type=color]{
     float: right;
 }
 h3{
-	font-size: 1.1vw;
+	font-size: 1.09vw;
+	margin: 0.9em 0px 0.8em 2em
+}
+input,img,textarea{
+	box-sizing: border-box;
 }
 /*input range*/  
 input[type=range] {  
-  -webkit-appearance: none;/*娓呴櫎绯荤粺榛樿鏍峰紡*/  
+  -webkit-appearance: none;/
   width: 100%;  
-  background: -webkit-linear-gradient(#61bd12, #61bd12) no-repeat, #ddd;/*璁剧疆宸﹁竟棰滆壊涓�#61bd12锛屽彸杈归鑹蹭负#ddd*/  
-  background-size: 100% 100%;/*璁剧疆宸﹀彸瀹藉害姣斾緥*/  
-  height: 3px;/*妯潯鐨勯珮搴�*/  
+  background: -webkit-linear-gradient(#61bd12, #61bd12) no-repeat, #ddd;
+  background-size: 100% 100%;
+  height: 3px; 
 }  
 input[type=range]::-webkit-slider-thumb {  
-  -webkit-appearance: none;/*娓呴櫎绯荤粺榛樿鏍峰紡*/  
-  height: 26px;/*鎷栧姩鍧楅珮搴�*/  
-  width: 26px;/*鎷栧姩鍧楀搴�*/  
-  background: #05E4ED;/*鎷栧姩鍧楄儗鏅�*/  
-  border-radius: 50%; /*澶栬璁剧疆涓哄渾褰�*/  
-  border: solid 1px #05E4ED; /*璁剧疆杈规*/  
+  -webkit-appearance: none;  
+  height: 26px;
+  width: 26px; 
+  background: #05E4ED;
+  border-radius: 50%;  
+  border: solid 1px #05E4ED; 
 } 
 a{
     cursor: pointer !important;
     color:#ffffff !important;
 }
-h3{
-	margin: 5px 0px 10px 0px;
+/*for webkit Chrome scroll style*/
+::-webkit-scrollbar{
+	width: 5px;
+	height: 5px;
 }
-/* ========== */
+::-webkit-scrollbar-thumb{
+	background-color: #016380;
+	border-radius: 5px;
+}
+::-webkit-scrollbar-track{
+	background-color: #003d67;
+	border-radius: 5px;
+}
+/* =================================================== */
 
-/* = flex Box = */
+/* ================= flex Box ======================== */
 .easyUtil-flexContainerRow{
 	display: -webkit-flex;
     display: flex;
@@ -88,7 +102,7 @@ h3{
     -webkit-flex-direction: column;
 }
 
-/* =========================================================== */
+/* ========================table serise=================================== */
 /* = table = */
 .easyUtil-table{
 	margin-bottom: 0px !important;
@@ -109,27 +123,37 @@ h3{
  	padding: 8px 0px !important;
  	font-size: 0.9vw;
  }
+ 
  /*counter*/
 .easyUtil-startCounter{
 	counter-reset: xuhao;
+}
+.easyUtil-counter{
+	vertical-align: baseline;
+	display: table;
 }
 .easyUtil-counter:before{
 	content: counter(xuhao);
 	counter-increment: xuhao;
 	background-color: rgb(0, 106, 155);
-	border-radius: 5px;
-	display: block;
-	width: 1.2vw;
-	height: 1.2vw;
-	margin: 30% auto;
+	border-radius: 0.2vw;
+	display: inline-block;
+	margin: auto;
+	min-width: 1.5em;
+    padding: 0 3px;
 	text-align: center;
 	font-size: 0.8vw;
+	box-sizing: border-box;
 }.counter1:before{
 	background-color: #d6505f;
 }.counter2:before{
 	background-color: orange;
 }.counter3:before{
 	background-color: #24FF00;
+}.circle:before{
+	border-radius: 50%;
+	width: 1.4em;
+	height: 1.4em;
 }
  
 /* = changeColor = */
@@ -145,7 +169,7 @@ h3{
 }
 /* ====================================================================== */
 
-/* = specail CSS = */
+/* ============================= specail CSS ============================= */
 .easyUtil-moreLightBox{
     box-shadow: 0px 0px 10px rgba(91,239,248,0.8);
 }
@@ -171,7 +195,8 @@ h3{
 	background-image: url(../img/Loading6-3.gif);
 	background-repeat: no-repeat;
 	background-position: center;
-	height: 80%;
+	height: 100%;
+	background-size: 2em;
 }
 /*fontCSS*/
 .easyUtil-fOrange{
@@ -229,13 +254,27 @@ h3{
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	z-index: 8999;
 }
 .easyUtil-fontOverFlow:hover{
 	overflow: visible;
+	color: #4dbeff !important;
 }
-/* ========== */
+.easyUtil-fontOverFlow *:hover{
+	overflow: visible;
+	color: #4dbeff !important;
+}
+.easyUtil-loading{
+	text-align: center;
+	margin: 5px auto;
+}
+.easyUtil-loading >img{
+	width: 25px;
+	height: 25px;
+}
+/* ============================================================================== */
 
-/* = animations = */
+/* ================================== animations ================================== */
 /*glitter*/
 .easyUtil-glittering {
  position: relative;
@@ -299,9 +338,9 @@ border-radius:100px;*/
 @-webkit-keyframes out{ 0%{ border-radius: 50%;} 100%{ border-radius: 10%;} } 
 @keyframes out{ 0%{ border-radius: 50%;} 100%{ border-radius: 10%;} }
 
-/* ========== */
+/* =============================================================================== */
 
-/* = layer = */
+/* ========================== layer=========================== */
 .layui-layer-setwin .layui-layer-close2 {
     position: absolute;
     right: -5px !important;
@@ -335,9 +374,9 @@ border-radius:100px;*/
     border-right:1px solid #2d7b80 !important; 
     border-bottom:1px solid #2d7b80 !important;
 }
-/* ========== */
+/* ======================================================================== */
 
-/* = popover Tips = */
+/* ====================== popover Tips =================================== */
 .popover{
   position: absolute;
   top: 2;
@@ -487,10 +526,9 @@ border-radius:100px;*/
   border-left-color: #333439;
 }
 
-/* ========== */
+/* ========================================================================= */
 
-
-/* = select Form = */
+/* ================================= select Form ================================ */
 .dropdown {
 z-index: 9999;
   position: relative;
@@ -512,7 +550,7 @@ z-index: 9999;
     height: 29px;
     /*width: 120px;*/
    	min-width: 110px;
-    line-height: 29px;
+    line-height: 4ex;
     margin-left: 15px;
     box-sizing: border-box;
 }
@@ -523,18 +561,22 @@ z-index: 9999;
 	height: 9px;
 	width: 9px;
 	cursor: pointer;
-	margin-top: 4px;
+	margin-top: 0.25em;
+	box-sizing: content-box;
+	margin-right: 0.2em;
 }
 .downarray:before{
 	content: " ";
 	white-space: pre;
-	display: block;
+	display: inline-block;
 	border-left: 2px solid;
 	border-bottom: 2px solid;
 	width: 9px;
 	height: 9px;
 	margin-left: 2px;
 	margin-top: -4px;
+	line-height: 2em;
+	vertical-align: 15px;  //ie middle,other ok
 }
 .dropdown-toggle{
 	height: 100%;
@@ -636,4 +678,4 @@ z-index: 9999;
   left: 0;
   z-index: 990;
 }
-/* ========== */
+/* =================================================================== */
