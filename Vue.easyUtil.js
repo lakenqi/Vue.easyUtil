@@ -1,7 +1,20 @@
-//  ========== 
-//  = Vue 组件 by qy = 
-//  ========== 
+/* ========== */
+/* = Vue.easyUtil by qy 2017.3.8 = */
+/* = easy-using for html DOM structure and data    = */
+/* = continue updating  = */
+/* = CopyRight by qy  = */
+/* ========== */
 //  = 下拉框 = 
+var _s = Vue.prototype._s
+//默认值
+Vue.prototype._s = function (s) {
+ /* if(parseInt(s,10) === 0 ){
+  	 return _s.call(this, s || 0)
+  }else{*/
+  	return _s.call(this, s || "--")
+  /*}*/ 
+}
+
 Vue.component('selected',{
 	props : ['id','text'],
 	template: '\

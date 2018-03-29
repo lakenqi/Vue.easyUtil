@@ -1,4 +1,9 @@
-/* = CSS noraml by qy 2018.1.4 = */
+/* ========== */
+/* = easyUtil Css by qy 2018.1.4 = */
+/* = unify and easy-using for css  = */
+/* = continue updating  = */
+/* = CopyRight by qy  = */
+/* ========== */
 /* ================ remove defaultCSS ======================== */
 *:focus {
     outline: none;
@@ -9,11 +14,13 @@ a:hover,a:focus,a:active,a:visited,a:link{
 
 /* ================================================================= */
 /* = base CSS = */
+html{
+	font-size: 1vw;
+}
 * {
     margin: 0px;
     padding: 0px;
     color: #FFFFFF;
-    font-size: 16px;
     font-family: "微软雅黑";
 }
 table thead, tbody tr {
@@ -88,7 +95,17 @@ a{
 	border-radius: 5px;
 }
 /* =================================================== */
-
+/* ======================= fixed body and perfect fits ====================== */
+.easyUtil-fixedBody{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	overflow: hidden;
+	margin: auto;
+}
+/* ====================================================== */
 /* ================= flex Box ======================== */
 .easyUtil-flexContainerRow{
 	display: -webkit-flex;
@@ -122,7 +139,10 @@ a{
  	border-top: none !important;
  	padding: 8px 0px !important;
  	font-size: 0.9vw;
- }
+}
+.easyUtil-table > tbody > tr > td *{
+ 	font-size: 0.9vw;
+}
  
  /*counter*/
 .easyUtil-startCounter{
@@ -140,6 +160,7 @@ a{
 	display: inline-block;
 	margin: auto;
 	min-width: 1.5em;
+	min-height: 1.5em;
     padding: 0 3px;
 	text-align: center;
 	font-size: 0.8vw;
@@ -154,6 +175,14 @@ a{
 	border-radius: 50%;
 	width: 1.4em;
 	height: 1.4em;
+}
+.easyUtil-CounterHead:before{
+	content: "序号";
+	font-size: 1vw;
+	font-weight: bolder;
+/*	display: inline-block;
+	margin: 7%;*/
+	vertical-align: -0.45em;
 }
  
 /* = changeColor = */
@@ -414,7 +443,7 @@ border-radius:100px;*/
   text-indent:0px !important;
   /*  line-break: auto;*/
 }
-/*.popover.top {
+.popover.top {
   margin-top: -10px;
 }
 .popover.right {
@@ -425,7 +454,7 @@ border-radius:100px;*/
 }
 .popover.left {
   margin-left: -10px;
-}*/
+}
 .popover-title {
     text-align: -moz-left;
     padding: 4px 4px !important;
@@ -470,7 +499,7 @@ border-radius:100px;*/
   left: 50%;
   margin-left: -11px;
   /* border-top-color: #05E4ED; */
-  border-top-color: rgba(0, 0, 0, .25);
+  border-top-color: #55a4ba;
   border-bottom-width: 0;
 }
 .popover.top > .arrow:after {
@@ -484,8 +513,7 @@ border-radius:100px;*/
   top: 50%;
   left: -11px;
   margin-top: -11px;
-  border-right-color: #999;
-  border-right-color: rgba(0, 0, 0, .25);
+  border-right-color: #55a4ba;
   border-left-width: 0;
 }
 .popover.right > .arrow:after {
@@ -501,7 +529,7 @@ border-radius:100px;*/
   margin-left: -11px;
   border-top-width: 0;
   border-bottom-color: #999;
-  border-bottom-color: rgba(0, 0, 0, .25);
+  border-bottom-color: #55a4ba;
 }
 .popover.bottom > .arrow:after {
   top: 1px;
@@ -516,7 +544,7 @@ border-radius:100px;*/
   margin-top: -11px;
   border-right-width: 0;
   border-left-color: #999;
-  border-left-color: rgba(0, 0, 0, .25);
+  border-left-color: #55a4ba;
 }
 .popover.left > .arrow:after {
   right: 1px;
@@ -534,7 +562,7 @@ z-index: 9999;
   position: relative;
 }
 .dropdown *{
-	font-size: 15px;
+	font-size:0.9vw;;
 }
 .dropdown li{
 	display: block !important;
@@ -576,7 +604,7 @@ z-index: 9999;
 	margin-left: 2px;
 	margin-top: -4px;
 	line-height: 2em;
-	vertical-align: 15px;  //ie middle,other ok
+	vertical-align: 15px;  /*ie middle,other ok*/
 }
 .dropdown-toggle{
 	height: 100%;
