@@ -14,14 +14,14 @@ a:hover,a:focus,a:active,a:visited,a:link{
 
 /* ================================================================= */
 /* = base CSS = */
-html{
+html,body{
 	font-size: 1vw;
 }
 * {
     margin: 0px;
     padding: 0px;
     color: #FFFFFF;
-    font-family: "微软雅黑";
+    font-family: "tahoma";
 }
 table thead, tbody tr {
     display:table;
@@ -163,7 +163,7 @@ a{
 	min-height: 1.5em;
     padding: 0 3px;
 	text-align: center;
-	font-size: 0.8vw;
+	font-size: 0.8em;
 	box-sizing: border-box;
 }.counter1:before{
 	background-color: #d6505f;
@@ -214,7 +214,7 @@ a{
 
 .easyUtil-addLevel{
     position: relative;
-    z-index: 99999;
+    z-index: 2;
 }
 
 .easyUtil-hidden{
@@ -256,19 +256,19 @@ a{
     font-size: 12px !important;
 }
 .easyUtil-font13{
-    font-size: 0.9vw !important;
+    font-size: 13px !important;
 }
 .easyUtil-font14{
-    font-size: 0.9vw; !important;
+    font-size: 14px; !important;
 }
 .easyUtil-font15{
-    font-size: 1vw !important;
+    font-size: 15px !important;
 }
 .easyUtil-font16{
-    font-size: 2.2vh !important;
+    font-size: 16px !important;
 }
 .easyUtil-font18{
-    font-size: 2.5vh !important;
+    font-size: 18px !important;
 }
 .easyUtil-fontBolder{
     font-weight: bolder !important;
@@ -283,7 +283,6 @@ a{
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	z-index: 8999;
 }
 .easyUtil-fontOverFlow:hover{
 	overflow: visible;
@@ -402,6 +401,24 @@ border-radius:100px;*/
     border-left:1px solid #2d7b80 !important;
     border-right:1px solid #2d7b80 !important; 
     border-bottom:1px solid #2d7b80 !important;
+}
+.layui-layer-btn .layui-layer-btn0 {
+    border-color: #4898d5 !important;
+    background-color: #2e8ded !important;
+    color: #fff;
+ }
+.layui-layer-btn a {
+    height: 28px;
+    line-height: 28px;
+    margin: 6px 6px 0;
+    padding: 0 15px;
+    border: none !important;
+    background-color: orange !important;
+    color: #333;
+    border-radius: 2px;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
 }
 /* ======================================================================== */
 
@@ -558,11 +575,8 @@ border-radius:100px;*/
 
 /* ================================= select Form ================================ */
 .dropdown {
-z-index: 9999;
+  z-index: 2;
   position: relative;
-}
-.dropdown *{
-	font-size:0.9vw;;
 }
 .dropdown li{
 	display: block !important;
@@ -614,7 +628,7 @@ z-index: 9999;
     position: absolute;
     top: 100%;
     left: -1px;
-    z-index: 1000;
+    z-index: 2;
     width: 100%;
     display: none;
     float: left;
@@ -704,6 +718,6 @@ z-index: 9999;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 990;
+  z-index: 2;
 }
 /* =================================================================== */

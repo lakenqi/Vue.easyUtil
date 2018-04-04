@@ -4,9 +4,9 @@
 /* = continue updating  = */
 /* = CopyRight by qy  = */
 /* ========== */
-//  = 下拉框 = 
-var _s = Vue.prototype._s
+
 //默认值
+var _s = Vue.prototype._s
 Vue.prototype._s = function (s) {
  /* if(parseInt(s,10) === 0 ){
   	 return _s.call(this, s || 0)
@@ -14,7 +14,7 @@ Vue.prototype._s = function (s) {
   	return _s.call(this, s || "--")
   /*}*/ 
 }
-
+//  = 下拉框 = 
 Vue.component('selected',{
 	props : ['id','text'],
 	template: '\
