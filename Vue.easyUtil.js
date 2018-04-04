@@ -8,17 +8,17 @@
 //默认值
 var _s = Vue.prototype._s
 Vue.prototype._s = function (s) {
- /* if(parseInt(s,10) === 0 ){
-  	 return _s.call(this, s || 0)
-  }else{*/
+  if(typeof s === 'number'){
+  	return _s.call(this, s)
+  }else{
   	return _s.call(this, s || "--")
-  /*}*/ 
+  } 
 }
 //  = 下拉框 = 
 Vue.component('selected',{
 	props : ['id','text'],
 	template: '\
-	<div :id="idName" class="dropdown blueForm easyUtil-toRight" @click="openMenu()" :class="openClass">\
+	<div :id="idName" class="dropdown blueForm" @click="openMenu()" :class="openClass">\
 		<button type="button" class="dropdown-toggle easyUtil-flexContainerRow" data-toggle="dropdown">\
 			<span class="">{{text}}</span>\
 			<i class="easyUtil-fBlue downarray"></i>\
