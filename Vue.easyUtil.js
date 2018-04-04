@@ -18,7 +18,7 @@ Vue.prototype._s = function (s) {
 Vue.component('selected',{
 	props : ['id','text'],
 	template: '\
-	<div :id="idName" class="dropdown blueForm easyUtil-toRight">\
+	<div :id="idName" class="dropdown blueForm easyUtil-toRight" @click="openMenu()" :class="openClass">\
 		<button type="button" class="dropdown-toggle easyUtil-flexContainerRow" data-toggle="dropdown">\
 			<span class="">{{text}}</span>\
 			<i class="easyUtil-fBlue downarray"></i>\
@@ -34,6 +34,20 @@ Vue.component('selected',{
 	data:function(){
 		return {
 			idName: this.id,
+			openClass: "",
+			isOpen:false
+		}
+	},
+	methods:{
+		openMenu : function () {
+			if (this.isOpen) {
+				this.openClass = ''
+				this.isOpen = false;
+			} else{
+				this.openClass = 'open'
+				this.isOpen = true;
+			}
+			
 		}
 	}
 });
