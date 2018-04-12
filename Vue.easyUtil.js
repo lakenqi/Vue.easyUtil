@@ -18,15 +18,15 @@ Vue.prototype._s = function (s) {
 Vue.component('selected',{
 	props : ['id','text'],
 	template: '\
-	<div :id="idName" class="dropdown blueForm" @click="openMenu()" :class="openClass">\
+	<div :id="idName" class="dropdown easyUtil-blueForm" v-outsideclose="closeMenu" @click="openMenu()" :class="openClass">\
 		<button type="button" class="dropdown-toggle easyUtil-flexContainerRow" data-toggle="dropdown">\
 			<span class="">{{text}}</span>\
 			<i class="easyUtil-fBlue downarray"></i>\
 		</button>\
-		<ul class="dropdown-menu dropdown-menu-right">\
+		<ul class="dropdown-menu dropdown-menu-right menu-list">\
 			<slot>\
 				<li>\
-					<a class="" val="">下拉框默认值，请在父组件中自定义该li标签即可</a>\
+					<a class="" val=""></a>\
 				</li>\
 		    </slot>\
 		</ul>\
@@ -34,29 +34,52 @@ Vue.component('selected',{
 	data:function(){
 		return {
 			idName: this.id,
-			openClass: "",
-			isOpen:false
+			openClass: null,
 		}
 	},
 	methods:{
 		openMenu : function () {
-			if (this.isOpen) {
-				this.openClass = ''
-				this.isOpen = false;
+			if (this.openClass) {
+				this.openClass = null
 			} else{
 				this.openClass = 'open'
-				this.isOpen = true;
 			}
-			
+		},
+		closeMenu:function () {
+			this.openClass = null
 		}
 	}
 });
 //  ========== 
+//  ========== 
+//  = 自定义外部点击关闭指令 = 
+Vue.directive('outsideclose',{
+	bind: function (el,binding,vnode) {
+		function handleClick(e){
+			if (el.contains(e.target)) {
+				return false;
+			}
+			if (binding.expression) {
+				binding.value(e);
+			}
+		}
+		el._outSideClose = handleClick;
+		document.addEventListener('click',handleClick);
+	},
+	unbind: function (el,binding) {
+		document.removeEventListener('click',el._outSideClose);
+		delete el._outSideClose;
+	}
+});
+//  ========== 
+
+
+
 //  = jDate 插件 日期组件 = 
 Vue.component('j-date',{
 	props : ['id','defaulttext'],
 	template: '\
-	<div class="blueForm easyUtil-flexContainerRow">\
+	<div class="easyUtil-blueForm easyUtil-flexContainerRow">\
 		<input type="text" class="jeinput" :name="idName" :id="idName" :placeholder="text" value="" readonly="readonly">\
 		<label :for="idName"><i class="iconfont easyUtil-fBlue icon-riqi"></i></label>\
 	</div>',

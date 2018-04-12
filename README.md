@@ -8,4 +8,6 @@
  						&emsp;&emsp;&emsp;&emsp;组件需配合jquery.easyUtil中的初始化方法可正常使用，样式引入easyUtil.css即可。</br>
  * <strong>2.j-date日期组件:</strong>在父级组件上用id，defalulttext属性，分别命名组件的id和默认显示文本,</br>
  						&emsp;&emsp;&emsp;&emsp;本组建基于jquery.jedate插件，需要引入，并用其方法初始化，同时需要easyUtil.css及jedate.css样式支持</br>
+* <strong>3.v-outsideclose指令:</strong>如有点击外部任意地方关闭菜单的需求，可使用该组件，绑定对应的关闭函数名称即可</br>
+
  			

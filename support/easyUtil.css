@@ -80,19 +80,20 @@ input[type=range]::-webkit-slider-thumb {
 a{
     cursor: pointer !important;
     color:#ffffff !important;
+    display: inline-block;
 }
 /*for webkit Chrome scroll style*/
 ::-webkit-scrollbar{
-	width: 5px;
-	height: 5px;
+	width: 2px;
+	height: 2px;
 }
 ::-webkit-scrollbar-thumb{
 	background-color: #016380;
-	border-radius: 5px;
+	border-radius: 2px;
 }
 ::-webkit-scrollbar-track{
 	background-color: #003d67;
-	border-radius: 5px;
+	border-radius: 2px;
 }
 /* =================================================== */
 /* ======================= fixed body and perfect fits ====================== */
@@ -138,9 +139,6 @@ a{
 .easyUtil-table > tbody > tr > td{
  	border-top: none !important;
  	padding: 8px 0px !important;
- 	font-size: 0.9vw;
-}
-.easyUtil-table > tbody > tr > td *{
  	font-size: 0.9vw;
 }
  
@@ -200,7 +198,7 @@ a{
 
 /* ============================= specail CSS ============================= */
 .easyUtil-moreLightBox{
-    box-shadow: 0px 0px 10px rgba(91,239,248,0.8);
+    box-shadow: 0px 0px 10px #4dbeff;
 }
 .easyUtil-moreLightFont{
     color:yellow !important;
@@ -284,9 +282,17 @@ a{
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-.easyUtil-fontOverFlow:hover{
-	overflow: visible;
+.easyUtil-fontOverFlow:hover:after{
+/*	overflow: visible;
+	content: attr(content);
 	color: #4dbeff !important;
+	white-space: normal;
+	display: block;
+	margin-top: -1em;
+	background-color: rgba(0, 0, 0, 0.71);
+    border: 1px solid #55a4ba; 
+    border-radius: 0px;
+    box-shadow: 0px 0px 10px rgba(45,123,128,0.8);*/
 }
 .easyUtil-fontOverFlow *:hover{
 	overflow: visible;
@@ -299,6 +305,32 @@ a{
 .easyUtil-loading >img{
 	width: 25px;
 	height: 25px;
+}
+
+/*instead of nothing*/
+.easyUtil-noContent{
+	text-align: center;
+    font-size: 15px;
+    margin: 1em auto;
+}
+/*button*/
+.easyUtil-btn{
+	color: #4dbeff;
+	border: 1px solid;
+    font-size: 15px;
+    padding: 0px 5px;
+    top: 0px;
+    min-height 30px;
+    min-width: 110px;
+    line-height: 2ex;
+    margin-left: 15px;
+    box-sizing: border-box;
+    display: inline-block;
+    white-space: pre;
+    text-align: center;
+}
+.easyUtil-btn:hover{
+	box-shadow: 0px 0px 10px;
 }
 /* ============================================================================== */
 
@@ -449,7 +481,7 @@ border-radius:100px;*/
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1000% 1000%;*/
- background-color: rgba(0, 0, 0, 0.71);
+ background-color: rgba(0, 0, 0, 0.9);
  /* -webkit-background-clip: padding-box;
           background-clip: padding-box;*/
   border: 1px solid #55a4ba; 
@@ -584,8 +616,9 @@ border-radius:100px;*/
 .dropdown-toggle:focus {
   	outline: 0;
 }
-.blueForm{
+.easyUtil-blueForm{
     border: 1px solid #2d6d92;
+    color: #4dbeff;
     font-size: 12px;
     padding:0px 5px;
     top: 0px;;
@@ -596,8 +629,7 @@ border-radius:100px;*/
     box-sizing: border-box;
     display: inline-block;
 }
-.blueForm:hover{
-	color: rgba(91,239,248,0.8);
+.easyUtil-blueForm:hover{
 	box-shadow: 0px 0px 10px;
 }
 .downarray{
