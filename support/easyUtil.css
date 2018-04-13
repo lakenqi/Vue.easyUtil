@@ -124,6 +124,7 @@ a{
 /* = table = */
 .easyUtil-table{
 	margin-bottom: 0px !important;
+	display: table;
 	text-align: center;
 	border-spacing: 0;
 	border-collapse: collapse;
@@ -141,14 +142,38 @@ a{
  	padding: 8px 0px !important;
  	font-size: 0.9vw;
 }
- 
+.thead,.tbody{
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+.tr{
+	display: table-row;
+}
+.td,.th{
+	display: table-cell;
+}
+.easyUtil-table > .thead >.tr {
+	background-color:#003050;
+}
+.easyUtil-table > .thead > .tr >.th{
+	border-bottom: none !important;
+	padding: 8px 0px !important;
+	font-size: 1vw;
+}
+.easyUtil-table > .tbody >.tr>.td{
+ 	border-top: none !important;
+ 	padding: 8px 0px !important;
+ 	font-size: 0.9vw;
+}
+
  /*counter*/
 .easyUtil-startCounter{
 	counter-reset: xuhao;
 }
 .easyUtil-counter{
 	vertical-align: baseline;
-	display: table;
+	/*display: block;*/
 }
 .easyUtil-counter:before{
 	content: counter(xuhao);
@@ -180,7 +205,7 @@ a{
 	font-weight: bolder;
 /*	display: inline-block;
 	margin: 7%;*/
-	vertical-align: -0.45em;
+	/*vertical-align: -0.45em;*/
 }
  
 /* = changeColor = */
@@ -190,8 +215,17 @@ a{
 .easyUtil-table tbody tr:nth-child(even){
 	background-color: rgba(255,255,255,0);
 }
+.easyUtil-table .tbody .tr:nth-child(odd){
+	background-color: #003050;
+}
+.easyUtil-table .tbody .tr:nth-child(even){
+	background-color: rgba(255,255,255,0);
+}
 /* = hoverColor = */
 .easyUtil-table tbody tr:hover{
+	background-color: rgba(0,82,153,0.9);
+}
+.easyUtil-table .tbody .tr:hover{
 	background-color: rgba(0,82,153,0.9);
 }
 /* ====================================================================== */
