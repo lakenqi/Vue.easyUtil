@@ -143,15 +143,18 @@ a{
  	font-size: 0.9vw;
 }
 .thead,.tbody{
-	display: table;
+	display: table !important;
 	width: 100%;
-	table-layout: fixed;
+	table-layout: fixed !important;
 }
 .tr{
 	display: table-row;
 }
 .td,.th{
-	display: table-cell;
+	display: table-cell !important;
+}
+.easyUtil-table a {
+	display: inline;
 }
 .easyUtil-table > .thead >.tr {
 	background-color:#003050;
@@ -187,6 +190,7 @@ a{
     padding: 0 3px;
 	text-align: center;
 	font-size: 0.8em;
+	vertical-align: 0.2ex;
 	box-sizing: border-box;
 }.counter1:before{
 	background-color: #d6505f;
