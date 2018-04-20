@@ -118,7 +118,22 @@ a{
     display: flex;
     flex-direction: column;
     -webkit-flex-direction: column;
+    justify-content: space-between;
 }
+
+/* = hover menu display class = */
+.easyUtil-mainMenu{
+	border-bottom: 5px solid transparent;
+}
+.easyUtil-disvisiable{
+	position: absolute;
+	visibility: hidden;
+}
+.easyUtil-mainMenu:hover .easyUtil-disvisiable{
+	visibility: visible;
+	transition: visibility 0s .4s;
+}
+/* ========== */
 
 /* ========================table serise=================================== */
 /* = table = */
@@ -134,12 +149,12 @@ a{
 }
 .easyUtil-table > thead > tr > th{
 	border-bottom: none !important;
-	padding: 8px 0px !important;
+	padding: 8px 4px !important;
 	font-size: 1vw;
 }
 .easyUtil-table > tbody > tr > td{
  	border-top: none !important;
- 	padding: 8px 0px !important;
+ 	padding: 8px 4px !important;
  	font-size: 0.9vw;
 }
 .thead,.tbody{
@@ -153,21 +168,20 @@ a{
 .td,.th{
 	display: table-cell !important;
 }
-.easyUtil-table a {
-	display: inline;
-}
 .easyUtil-table > .thead >.tr {
 	background-color:#003050;
 }
-.easyUtil-table > .thead > .tr >.th{
+.easyUtil-table > .thead >.tr >.th{
 	border-bottom: none !important;
-	padding: 8px 0px !important;
+	padding: 8px 4px !important;
 	font-size: 1vw;
+	box-sizing: border-box;
 }
 .easyUtil-table > .tbody >.tr>.td{
  	border-top: none !important;
- 	padding: 8px 0px !important;
+ 	padding: 8px 4px !important;
  	font-size: 0.9vw;
+ 	box-sizing: border-box;
 }
 
  /*counter*/
@@ -319,11 +333,12 @@ a{
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	/*cursor: pointer;*/
 }
-.easyUtil-fontOverFlow:hover:after{
+.easyUtil-fontOverFlow:hover{
+	color: #4dbeff !important;
 /*	overflow: visible;
 	content: attr(content);
-	color: #4dbeff !important;
 	white-space: normal;
 	display: block;
 	margin-top: -1em;
@@ -333,7 +348,7 @@ a{
     box-shadow: 0px 0px 10px rgba(45,123,128,0.8);*/
 }
 .easyUtil-fontOverFlow *:hover{
-	overflow: visible;
+	/*overflow: visible;*/
 	color: #4dbeff !important;
 }
 .easyUtil-loading{
@@ -797,3 +812,9 @@ border-radius:100px;*/
   z-index: 2;
 }
 /* =================================================================== */
+/* = thinkSerach css = */
+.ui-widget-content {
+    border: 1px solid #2d6d92 !important;
+    background: rgba(7, 43, 96, 0.5);
+}
+/* ========== */
